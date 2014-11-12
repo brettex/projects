@@ -1,0 +1,2170 @@
+/*
+	Theme Name: Tech Smart Museum
+	Theme URI: http://my.thetech.org	
+	Description: Custom Responsive theme built on HTML5 Blank
+	Version: 1.0.0
+	Author: Primitive Spark, Brett Exnowski
+	Author URI: http://primitivespark.com
+	Tags: Blank, HTML5, CSS3
+	
+	License: MIT
+	License URI: http://opensource.org/licenses/mit-license.php
+*/
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700,300);
+
+
+/*------------------------------------*\
+	TYPOGRAPHY
+\*------------------------------------*/
+
+
+@font-face {
+	font-family:'Bariol';
+	src:url('../fonts/Bariol.eot');
+	src:url('../fonts/Bariol.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Bariol.otf') format('opentype'),
+		url('../fonts/Bariol.svg') format('svg'),
+		url('../fonts/Bariol.woff') format('woff'),
+		url('../fonts/Bariol.ttf') format('truetype');
+}
+
+@font-face {
+	font-family:'MetaNormal';
+	src:url('../fonts/meta_normal_roman.eot');
+	src:url('../fonts/meta_normal_roman.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/meta_normal_roman.otf') format('opentype'),
+		url('../fonts/meta_normal_roman.svg') format('svg'),
+		url('../fonts/meta_normal_roman.woff') format('woff'),
+		url('../fonts/meta_normal_roman.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'thetech';
+	src:url('../fonts/thetech.eot?-23zy4u');
+	src:url('../fonts/thetech.eot?#iefix-23zy4u') format('embedded-opentype'),
+		url('../fonts/thetech.woff?-23zy4u') format('woff'),
+		url('../fonts/thetech.ttf?-23zy4u') format('truetype'),
+		url('../fonts/thetech.svg?-23zy4u#thetech') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'thetech';
+}
+[class^="icon-"] {
+	font-family: 'Bariol';
+}
+[class^="icon-"], [class*=" icon-"]{
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-escalator:before {
+	content: "\e603";
+}
+.icon-stairs:before {
+	content: "\e600";
+}
+.icon-marker:before {
+	content: "\e601";
+}
+.icon-elevator:before {
+	content: "\e602";
+}
+
+
+.avatar-lego:before {
+	content: "\0074";
+	color: #fdc400; /* not sure if colors are set here or cms */
+}
+
+/*******  Avatar SVG Icons *******/
+.avatar{
+	width:24px;
+	height:24px;
+	background-color:transparent;
+	background-position:center center;
+	background:no-repeat;
+	background-size:cover;
+	display:inline-block;
+}
+
+/** Specific Avatars **/
+/** PNGs **/
+.avatar.lego-yellow{background-image: url('../img/avatars/lego_yellow.png');}
+.avatar.lego-blue{background-image: url('../img/avatars/lego_blue.png');}
+.avatar.lego-green{background-image: url('../img/avatars/lego_green.png');}
+.avatar.lego-red{background-image: url('../img/avatars/lego_red.png');}
+.avatar.doll-red{background-image: url('../img/avatars/doll_red.png');}
+.avatar.doll-green{background-image: url('../img/avatars/doll_green.png');}
+.avatar.doll-blue{background-image: url('../img/avatars/doll_blue.png');}
+.avatar.doll-yellow{background-image: url('../img/avatars/doll_yellow.png');}
+.avatar.alien-red{background-image: url('../img/avatars/alien_red.png');}
+.avatar.alien-green{background-image: url('../img/avatars/alien_green.png');}
+.avatar.alien-blue{background-image: url('../img/avatars/alien_blue.png');}
+.avatar.alien-yellow{background-image: url('../img/avatars/alien_yellow.png');}
+.avatar.artist-red{background-image: url('../img/avatars/artist_red.png');}
+.avatar.artist-green{background-image: url('../img/avatars/artist_green.png');}
+.avatar.artist-blue{background-image: url('../img/avatars/artist_blue.png');}
+.avatar.artist-yellow{background-image: url('../img/avatars/artist_yellow.png');}
+.avatar.baby-red{background-image: url('../img/avatars/baby_red.png');}
+.avatar.baby-green{background-image: url('../img/avatars/baby_green.png');}
+.avatar.baby-blue{background-image: url('../img/avatars/baby_blue.png');}
+.avatar.baby-yellow{background-image: url('../img/avatars/baby_yellow.png');}
+.avatar.beret-red{background-image: url('../img/avatars/beret_red.png');}
+.avatar.beret-green{background-image: url('../img/avatars/beret_green.png');}
+.avatar.beret-blue{background-image: url('../img/avatars/beret_blue.png');}
+.avatar.beret-yellow{background-image: url('../img/avatars/beret_yellow.png');}
+.avatar.bird-red{background-image: url('../img/avatars/bird_red.png');}
+.avatar.bird-green{background-image: url('../img/avatars/bird_green.png');}
+.avatar.bird-blue{background-image: url('../img/avatars/bird_blue.png');}
+.avatar.bird-yellow{background-image: url('../img/avatars/bird_yellow.png');}
+.avatar.bro-red{background-image: url('../img/avatars/bro_red.png');}
+.avatar.bro-green{background-image: url('../img/avatars/bro_green.png');}
+.avatar.bro-blue{background-image: url('../img/avatars/bro_blue.png');}
+.avatar.bro-yellow{background-image: url('../img/avatars/bro_yellow.png');}
+.avatar.cat-red{background-image: url('../img/avatars/cat_red.png');}
+.avatar.cat-green{background-image: url('../img/avatars/cat_green.png');}
+.avatar.cat-blue{background-image: url('../img/avatars/cat_blue.png');}
+.avatar.cat-yellow{background-image: url('../img/avatars/cat_yellow.png');}
+.avatar.cow-red{background-image: url('../img/avatars/cow_red.png');}
+.avatar.cow-green{background-image: url('../img/avatars/cow_green.png');}
+.avatar.cow-blue{background-image: url('../img/avatars/cow_blue.png');}
+.avatar.cow-yellow{background-image: url('../img/avatars/cow_yellow.png');}
+.avatar.dog-red{background-image: url('../img/avatars/dog_red.png');}
+.avatar.dog-green{background-image: url('../img/avatars/dog_green.png');}
+.avatar.dog-blue{background-image: url('../img/avatars/dog_blue.png');}
+.avatar.dog-yellow{background-image: url('../img/avatars/dog_yellow.png');}
+.avatar.glasses-red{background-image: url('../img/avatars/glasses_red.png');}
+.avatar.glasses-green{background-image: url('../img/avatars/glasses_green.png');}
+.avatar.glasses-blue{background-image: url('../img/avatars/glasses_blue.png');}
+.avatar.glasses-yellow{background-image: url('../img/avatars/glasses_yellow.png');}
+.avatar.jellyfish-red{background-image: url('../img/avatars/jellyfish_red.png');}
+.avatar.jellyfish-green{background-image: url('../img/avatars/jellyfish_green.png');}
+.avatar.jellyfish-blue{background-image: url('../img/avatars/jellyfish_blue.png');}
+.avatar.jellyfish-yellow{background-image: url('../img/avatars/jellyfish_yellow.png');}
+.avatar.leia-red{background-image: url('../img/avatars/leia_red.png');}
+.avatar.leia-green{background-image: url('../img/avatars/leia_green.png');}
+.avatar.leia-blue{background-image: url('../img/avatars/leia_blue.png');}
+.avatar.leia-yellow{background-image: url('../img/avatars/leia_yellow.png');}
+.avatar.max-red{background-image: url('../img/avatars/max_red.png');}
+.avatar.max-green{background-image: url('../img/avatars/max_green.png');}
+.avatar.max-blue{background-image: url('../img/avatars/max_blue.png');}
+.avatar.max-yellow{background-image: url('../img/avatars/max_yellow.png');}
+.avatar.monkey-red{background-image: url('../img/avatars/monkey_red.png');}
+.avatar.monkey-green{background-image: url('../img/avatars/monkey_green.png');}
+.avatar.monkey-blue{background-image: url('../img/avatars/monkey_blue.png');}
+.avatar.monkey-yellow{background-image: url('../img/avatars/monkey_yellow.png');}
+.avatar.monster-red{background-image: url('../img/avatars/monster_red.png');}
+.avatar.monster-green{background-image: url('../img/avatars/monster_green.png');}
+.avatar.monster-blue{background-image: url('../img/avatars/monster_blue.png');}
+.avatar.monster-yellow{background-image: url('../img/avatars/monster_yellow.png');}
+.avatar.ninja-red{background-image: url('../img/avatars/ninja_red.png');}
+.avatar.ninja-green{background-image: url('../img/avatars/ninja_green.png');}
+.avatar.ninja-blue{background-image: url('../img/avatars/ninja_blue.png');}
+.avatar.ninja-yellow{background-image: url('../img/avatars/ninja_yellow.png');}
+.avatar.owl-red{background-image: url('../img/avatars/owl_red.png');}
+.avatar.owl-green{background-image: url('../img/avatars/owl_green.png');}
+.avatar.owl-blue{background-image: url('../img/avatars/owl_blue.png');}
+.avatar.owl-yellow{background-image: url('../img/avatars/owl_yellow.png');}
+.avatar.penguin-red{background-image: url('../img/avatars/penguin_red.png');}
+.avatar.penguin-green{background-image: url('../img/avatars/penguin_green.png');}
+.avatar.penguin-blue{background-image: url('../img/avatars/penguin_blue.png');}
+.avatar.penguin-yellow{background-image: url('../img/avatars/penguin_yellow.png');}
+.avatar.pig-red{background-image: url('../img/avatars/pig_red.png');}
+.avatar.pig-green{background-image: url('../img/avatars/pig_green.png');}
+.avatar.pig-blue{background-image: url('../img/avatars/pig_blue.png');}
+.avatar.pig-yellow{background-image: url('../img/avatars/pig_yellow.png');}
+.avatar.pipe-red{background-image: url('../img/avatars/pipe_red.png');}
+.avatar.pipe-green{background-image: url('../img/avatars/pipe_green.png');}
+.avatar.pipe-blue{background-image: url('../img/avatars/pipe_blue.png');}
+.avatar.pipe-yellow{background-image: url('../img/avatars/pipe_yellow.png');}
+.avatar.pumpkin-red{background-image: url('../img/avatars/pumpkin_red.png');}
+.avatar.pumpkin-green{background-image: url('../img/avatars/pumpkin_green.png');}
+.avatar.pumpkin-blue{background-image: url('../img/avatars/pumpkin_blue.png');}
+.avatar.pumpkin-yellow{background-image: url('../img/avatars/pumpkin_yellow.png');}
+.avatar.tophat-red{background-image: url('../img/avatars/tophat_red.png');}
+.avatar.tophat-green{background-image: url('../img/avatars/tophat_green.png');}
+.avatar.tophat-blue{background-image: url('../img/avatars/tophat_blue.png');}
+.avatar.tophat-yellow{background-image: url('../img/avatars/tophat_yellow.png');}
+	
+/** SVG's **/
+.svg .avatar.lego-yellow{background-image: url('../img/avatars/lego_yellow.svg');}
+.svg .avatar.lego-blue{background-image: url('../img/avatars/lego_blue.svg');}
+.svg .avatar.lego-green{background-image: url('../img/avatars/lego_green.svg');}
+.svg .avatar.lego-red{background-image: url('../img/avatars/lego_red.svg');}
+.svg .avatar.doll-red{background-image: url('../img/avatars/doll_red.svg');}
+.svg .avatar.doll-green{background-image: url('../img/avatars/doll_green.svg');}
+.svg .avatar.doll-blue{background-image: url('../img/avatars/doll_blue.svg');}
+.svg .avatar.doll-yellow{background-image: url('../img/avatars/doll_yellow.svg');}
+.svg .avatar.alien-red{background-image: url('../img/avatars/alien_red.svg');}
+.svg .avatar.alien-green{background-image: url('../img/avatars/alien_green.svg');}
+.svg .avatar.alien-blue{background-image: url('../img/avatars/alien_blue.svg');}
+.svg .avatar.alien-yellow{background-image: url('../img/avatars/alien_yellow.svg');}
+.svg .avatar.artist-red{background-image: url('../img/avatars/artist_red.svg');}
+.svg .avatar.artist-green{background-image: url('../img/avatars/artist_green.svg');}
+.svg .avatar.artist-blue{background-image: url('../img/avatars/artist_blue.svg');}
+.svg .avatar.artist-yellow{background-image: url('../img/avatars/artist_yellow.svg');}
+.svg .avatar.baby-red{background-image: url('../img/avatars/baby_red.svg');}
+.svg .avatar.baby-green{background-image: url('../img/avatars/baby_green.svg');}
+.svg .avatar.baby-blue{background-image: url('../img/avatars/baby_blue.svg');}
+.svg .avatar.baby-yellow{background-image: url('../img/avatars/baby_yellow.svg');}
+.svg .avatar.beret-red{background-image: url('../img/avatars/beret_red.svg');}
+.svg .avatar.beret-green{background-image: url('../img/avatars/beret_green.svg');}
+.svg .avatar.beret-blue{background-image: url('../img/avatars/beret_blue.svg');}
+.svg .avatar.beret-yellow{background-image: url('../img/avatars/beret_yellow.svg');}
+.svg .avatar.bird-red{background-image: url('../img/avatars/bird_red.svg');}
+.svg .avatar.bird-green{background-image: url('../img/avatars/bird_green.svg');}
+.svg .avatar.bird-blue{background-image: url('../img/avatars/bird_blue.svg');}
+.svg .avatar.bird-yellow{background-image: url('../img/avatars/bird_yellow.svg');}
+.svg .avatar.bro-red{background-image: url('../img/avatars/bro_red.svg');}
+.svg .avatar.bro-green{background-image: url('../img/avatars/bro_green.svg');}
+.svg .avatar.bro-blue{background-image: url('../img/avatars/bro_blue.svg');}
+.svg .avatar.bro-yellow{background-image: url('../img/avatars/bro_yellow.svg');}
+.svg .avatar.cat-red{background-image: url('../img/avatars/cat_red.svg');}
+.svg .avatar.cat-green{background-image: url('../img/avatars/cat_green.svg');}
+.svg .avatar.cat-blue{background-image: url('../img/avatars/cat_blue.svg');}
+.svg .avatar.cat-yellow{background-image: url('../img/avatars/cat_yellow.svg');}
+.svg .avatar.cow-red{background-image: url('../img/avatars/cow_red.svg');}
+.svg .avatar.cow-green{background-image: url('../img/avatars/cow_green.svg');}
+.svg .avatar.cow-blue{background-image: url('../img/avatars/cow_blue.svg');}
+.svg .avatar.cow-yellow{background-image: url('../img/avatars/cow_yellow.svg');}
+.svg .avatar.dog-red{background-image: url('../img/avatars/dog_red.svg');}
+.svg .avatar.dog-green{background-image: url('../img/avatars/dog_green.svg');}
+.svg .avatar.dog-blue{background-image: url('../img/avatars/dog_blue.svg');}
+.svg .avatar.dog-yellow{background-image: url('../img/avatars/dog_yellow.svg');}
+.svg .avatar.glasses-red{background-image: url('../img/avatars/glasses_red.svg');}
+.svg .avatar.glasses-green{background-image: url('../img/avatars/glasses_green.svg');}
+.svg .avatar.glasses-blue{background-image: url('../img/avatars/glasses_blue.svg');}
+.svg .avatar.glasses-yellow{background-image: url('../img/avatars/glasses_yellow.svg');}
+.svg .avatar.jellyfish-red{background-image: url('../img/avatars/jellyfish_red.svg');}
+.svg .avatar.jellyfish-green{background-image: url('../img/avatars/jellyfish_green.svg');}
+.svg .avatar.jellyfish-blue{background-image: url('../img/avatars/jellyfish_blue.svg');}
+.svg .avatar.jellyfish-yellow{background-image: url('../img/avatars/jellyfish_yellow.svg');}
+.svg .avatar.leia-red{background-image: url('../img/avatars/leia_red.svg');}
+.svg .avatar.leia-green{background-image: url('../img/avatars/leia_green.svg');}
+.svg .avatar.leia-blue{background-image: url('../img/avatars/leia_blue.svg');}
+.svg .avatar.leia-yellow{background-image: url('../img/avatars/leia_yellow.svg');}
+.svg .avatar.max-red{background-image: url('../img/avatars/max_red.svg');}
+.svg .avatar.max-green{background-image: url('../img/avatars/max_green.svg');}
+.svg .avatar.max-blue{background-image: url('../img/avatars/max_blue.svg');}
+.svg .avatar.max-yellow{background-image: url('../img/avatars/max_yellow.svg');}
+.svg .avatar.monkey-red{background-image: url('../img/avatars/monkey_red.svg');}
+.svg .avatar.monkey-green{background-image: url('../img/avatars/monkey_green.svg');}
+.svg .avatar.monkey-blue{background-image: url('../img/avatars/monkey_blue.svg');}
+.svg .avatar.monkey-yellow{background-image: url('../img/avatars/monkey_yellow.svg');}
+.svg .avatar.monster-red{background-image: url('../img/avatars/monster_red.svg');}
+.svg .avatar.monster-green{background-image: url('../img/avatars/monster_green.svg');}
+.svg .avatar.monster-blue{background-image: url('../img/avatars/monster_blue.svg');}
+.svg .avatar.monster-yellow{background-image: url('../img/avatars/monster_yellow.svg');}
+.svg .avatar.ninja-red{background-image: url('../img/avatars/ninja_red.svg');}
+.svg .avatar.ninja-green{background-image: url('../img/avatars/ninja_green.svg');}
+.svg .avatar.ninja-blue{background-image: url('../img/avatars/ninja_blue.svg');}
+.svg .avatar.ninja-yellow{background-image: url('../img/avatars/ninja_yellow.svg');}
+.svg .avatar.owl-red{background-image: url('../img/avatars/owl_red.svg');}
+.svg .avatar.owl-green{background-image: url('../img/avatars/owl_green.svg');}
+.svg .avatar.owl-blue{background-image: url('../img/avatars/owl_blue.svg');}
+.svg .avatar.owl-yellow{background-image: url('../img/avatars/owl_yellow.svg');}
+.svg .avatar.penguin-red{background-image: url('../img/avatars/penguin_red.svg');}
+.svg .avatar.penguin-green{background-image: url('../img/avatars/penguin_green.svg');}
+.svg .avatar.penguin-blue{background-image: url('../img/avatars/penguin_blue.svg');}
+.svg .avatar.penguin-yellow{background-image: url('../img/avatars/penguin_yellow.svg');}
+.svg .avatar.pig-red{background-image: url('../img/avatars/pig_red.svg');}
+.svg .avatar.pig-green{background-image: url('../img/avatars/pig_green.svg');}
+.svg .avatar.pig-blue{background-image: url('../img/avatars/pig_blue.svg');}
+.svg .avatar.pig-yellow{background-image: url('../img/avatars/pig_yellow.svg');}
+.svg .avatar.pipe-red{background-image: url('../img/avatars/pipe_red.svg');}
+.svg .avatar.pipe-green{background-image: url('../img/avatars/pipe_green.svg');}
+.svg .avatar.pipe-blue{background-image: url('../img/avatars/pipe_blue.svg');}
+.svg .avatar.pipe-yellow{background-image: url('../img/avatars/pipe_yellow.svg');}
+.svg .avatar.pumpkin-red{background-image: url('../img/avatars/pumpkin_red.svg');}
+.svg .avatar.pumpkin-green{background-image: url('../img/avatars/pumpkin_green.svg');}
+.svg .avatar.pumpkin-blue{background-image: url('../img/avatars/pumpkin_blue.svg');}
+.svg .avatar.pumpkin-yellow{background-image: url('../img/avatars/pumpkin_yellow.svg');}
+.svg .avatar.tophat-red{background-image: url('../img/avatars/tophat_red.svg');}
+.svg .avatar.tophat-green{background-image: url('../img/avatars/tophat_green.svg');}
+.svg .avatar.tophat-blue{background-image: url('../img/avatars/tophat_blue.svg');}
+.svg .avatar.tophat-yellow{background-image: url('../img/avatars/tophat_yellow.svg');}
+
+
+
+/*------------------------------------*\
+    MAIN
+\*------------------------------------*/
+
+iframe{display:block;} /* Get rid of spacing */
+/* global box-sizing */
+*,
+*:after,
+*:before {
+	box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-webkit-font-smoothing:antialiased;
+	font-smoothing:antialiased;
+	text-rendering:optimizeLegibility;
+}
+/* html element 62.5% font-size for REM use */
+html {font-size:62.5%;}
+body {
+	background: url('../img/body-bg.png') 35px top repeat #f3f3f3;
+    color: #2e2e2e;
+    font-family: "Open Sans", Arial, sans-serif;
+    font-size: 13px;
+    line-height: 16px;
+    margin: 0 auto;
+}
+
+/* clear */
+.clear:before,
+.clear:after {
+    content:' ';
+    display:table;
+}
+.clear:after {clear:both;}
+.clear {*zoom:1;}
+
+
+img {max-width:100%;vertical-align:bottom;}
+a {
+	color:#ec7404;
+	outline:none;
+	text-decoration:none;
+}
+a:hover {color:#ec7404;text-decoration:underline;}
+a:focus {outline:none;}
+a:active {outline:none;color:#ec7404;}
+a:visited{}
+
+/*** Add Underline for Touch devices ***/
+.touch a:link{text-decoration:underline;}
+.touch #header a,
+.touch .form-item a,
+.touch .ui-selectmenu-menu a,
+.touch a.ui-select-menu
+{text-decoration:none;} 
+
+input:focus {outline:0;}
+
+menu, ol, ul {padding:0;list-style:none;}
+dl, menu, ol, ul {margin:0;}
+
+p{margin:0;}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6, h7 {
+    color: #747474;
+    font-weight: 300;
+    margin:0;
+	font-family: 'Open Sans', Arial serif;
+}
+
+h1.page-title{
+	font-size: 30px;
+    line-height: 40px;
+    margin: 0 0 20px;
+}
+h1.page-title small { font-size: 0.5em; }
+
+h2{font-size:20px;}
+h3 { font-size: 1.6em; }
+h4 { font-size: 1.4em; }
+h5 { font-size: 1.1em; }
+h6 { font-size: 1.0em; }
+
+/* set fontawesome colors */
+.fa,
+a.share .fa { color: #808285; } /* seems most icons are this color. will definitely revisit. looks to be more work after setting this color */
+a .fa-ticket, a .fa-arrows, a .fa-angle-double-right, a .fa-angle-right, a .fa-chevron-right { color: #ec7404; } /* There are exceptions to that rule, will revisit if there are many more */
+/*.fa,
+a.share .fa { color: #808285; }*/ /* seems most icons are this color. will definitely revisit. looks to be more work after setting this color */
+/*a .fa-ticket, a .fa-arrows, a .fa-angle-double-right, a .fa-angle-right { color: #ec7404; }*/ /* There are exceptions to that rule, will revisit if there are many more */
+a .fa-barcode{color:#fff;margin-right:5px;}
+/*------------------------------------*\
+    STRUCTURE
+\*------------------------------------*/
+.wrapper{max-width:none;width:100%;margin:0 0 100px auto;padding-right:50px;}
+aside{max-width:200px;width:100%;z-index:201;}
+section.main{width:calc(100% - 450px);padding:20px 40px 20px 40px;position:relative;}
+/* No Right Sidebar */
+.no-right-sidebar section.main{width:calc(100% - 200px);padding-right:0px;}
+.right-content{width:250px;margin-top:80px;}/* the right sidebar is always 250px; */
+
+
+
+/*------------------------------------*\
+    HEADER
+\*------------------------------------*/
+#header{background: rgba(0,0,0,0.8);height:57px;overflow:visible;width:100%;}
+#header .inner{;margin:0;padding:0 50px}
+
+.logo{
+	display: block;
+    height: 93px;
+    left: 40px;
+    position: absolute;
+    top: 10px;
+    width: 99px;
+}
+.hamburger{display:none;}
+
+/* Global Nav */
+#header .account-options > li{position:relative;}
+#header .account-options > li > a{
+	color:#fff;
+	font-size:16px;
+	font-weight:300;
+	padding:12px 10px;
+	border-top:4px solid transparent;
+	display:block;
+	height:57px;
+	text-decoration:none;
+}
+/* User Avatar */
+#header .account-options > li > a .avatar{
+	padding-right:5px;
+	vertical-align:text-top;
+}
+
+#header .account-options > li > a > i{
+	color:#aaa;
+	font-size:13px;
+	padding-left:15px;
+}
+
+
+#header .account-options ul, .side-nav ul ul{
+	display:none;
+	background: rgba(88,88,88,0.95);
+	position:absolute;
+	top:71px;
+	left:0px;
+	padding:12px 0;
+	z-index:2;
+}
+
+#header .account-options ul{
+	top:57px;
+	z-index:202;
+}
+#header .account-options > li:hover > a{border-top-color:#83b63d;background:rgba(0,0,0,0.2);color:#e3fcc1;}
+
+#header .account-options li:hover ul{} /* Removed block on hover, doesent translate to mobile :( */
+
+#header .account-options ul a,
+.side-nav ul ul a{
+	white-space:nowrap;
+	line-height:49px;
+	padding:0 0 0 15px;
+	border-left:4px solid transparent;
+	color:rgba(253,253,253,0.90);
+	min-width:185px;
+	font-weight:300;
+	display:block;
+	font-size:16px;
+}
+
+/* Active and Hover styles */
+#header .account-options ul a:hover,
+#header .account-options ul li.active a,
+nav ul ul li.active > a, 
+nav ul ul a:hover{border-left-color:#86b93f;background:rgba(0,0,0,0.2);color:rgba(227,252,193,0.90);}
+
+/* Account/Profile Actions */
+.not-logged-in .account-actions{padding-top:12px;padding-right: 10px;}
+.account-actions .icon{font-size:20px;line-height:33px;color:rgba(170,170,170,0.5);}
+
+.account-actions a:hover{text-decoration:none;}
+
+/** Logged In Account Actions **/
+
+/* Notifications */
+#header .notifications{
+	padding:16px 10px 0 0;
+	position:relative;
+}
+
+.note-control{
+	background:#7dbb28;
+	width:22px;
+	height:20px;
+	line-height:20px;
+	display:inline-block;
+	font-size:14px;
+	font-weight:bold;
+	color:#fff;
+	text-align:center;
+	position:relative;
+}
+
+.note-control:hover{color:#fff;}
+
+.notifications-list{
+	display:none;
+	position:absolute;
+	top:60px;
+	right:3px;
+	background:rgba(66,66,66,0.95);
+	padding:20px;
+	width:245px;
+	z-index:202;
+	color:#f3f3f3;
+}
+
+.notifications-list:before{
+	border:13px solid transparent;
+	border-left-color:rgba(66,66,66,0.95);
+	content: "";
+    display: block;
+    height: 0;
+	width: 0;
+    position: absolute;
+    right: -13px;
+    top: -13px;
+	-webkit-transform: rotate(45deg);
+	   -moz-transform: rotate(45deg);
+	    -ms-transform: rotate(45deg);
+	     -o-transform: rotate(45deg);
+	        transform: rotate(45deg);
+}
+
+.notifications.expanded .notifications-list{
+	display:block;
+}
+.note-control:after{
+	border:5px solid transparent;
+	border-left-color:#7dbb28;
+	content: "";
+    display: block;
+    height: 0;
+	width: 0;
+    position: absolute;
+    right: -5px;
+    top: 15px;
+	-webkit-transform: rotate(135deg);
+	   -moz-transform: rotate(135deg);
+	    -ms-transform: rotate(135deg);
+	     -o-transform: rotate(135deg);
+	        transform: rotate(135deg);
+}
+/* Font Awesome  used in notifications */
+.notifications i{font-size:30px;}
+
+.notifications-list h2{color:#f3f3f3;margin-bottom:15px;}
+.notifications-list a i.fa-gear{color:#f3f3f3;font-size:16px;}
+
+/* List Items in notification */
+.notifications-list .item{
+	clear:both;
+	border-top:1px solid rgba(243,243,244,0.2);
+	padding:10px 0px;
+	line-height:18px;
+}
+
+.notifications-list .item p{
+	width:80%;
+	max-width:160px;
+	padding-left:20px;
+}
+
+/** Color Overrides for Notifications Drop Down **/
+.notifications-list .item p a{
+	color:#ffc58e;
+}
+
+.notifications-list .item .fa{
+	color:#cfcfcf;
+}
+
+.notifications-list .all-notes{
+	background:#EC7404;
+    bottom: -30px;
+    color: #FFFFFF;
+    display: block;
+    height: 30px;
+    left: 0;
+    line-height: 30px;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+	font-size:1.6rem;
+}
+.notifications-list .all-notes:hover{background:#fa800f;}
+.notifications-list .all-notes:before{
+	content: "\f01c";
+	font-family:"FontAwesome";
+	padding-right:8px;
+}
+/*------------------------------------*\
+    LEFT SIDEBAR
+\*------------------------------------*/
+.side-nav{border-top:80px solid #8dc63f;}
+.side-nav ul ul{position:static;display:block;padding:5px 0px;}
+
+.side-nav > ul{background: rgba(0,0,0,0.8);}
+.side-nav li{position:relative;margin-bottom:1px;}
+.side-nav > ul > li > a{
+	line-height:54px;
+	font-size:20px;
+	color:#fff;
+	background: rgba(0,0,0,0.35);
+	font-weight:300;
+	display:block;
+	padding-left:37px;
+	text-decoration:none;
+}
+
+.side-nav ul ul a{
+	min-width:none;
+	padding:0 0 0 46px;
+	line-height:42px;
+	text-decoration:none;
+}
+
+/* Toggle Arrows */
+.side-nav .toggle-arrow{
+	position:absolute;
+	left:11px;
+	top:23px;
+	background: url('../img/toggle-arrow.png') left top no-repeat transparent;
+	display:block;
+	width:16px;
+	height:16px;
+	cursor:pointer;
+	transition: .5s ease-in-out;
+	-webkit-transform:rotate(90deg);
+	   -moz-transform:rotate(90deg);
+	    -ms-transform:rotate(90deg);
+	   	    transform:rotate(90deg);
+
+}
+/* Rotate the Arrow down */
+.side-nav .toggle-arrow.rotate{
+	top:20px;
+	-webkit-transform:rotate(0deg);
+	   -moz-transform:rotate(0deg);
+	    -ms-transform:rotate(0deg);
+	   	    transform:rotate(0deg);
+}
+
+.side-nav .toggle-arrow.expanded{}
+
+/** Footer Nav **/
+aside footer{padding:30px 30px 50px 30px;background:rgba(250,250,250,0.9);}
+aside footer ul a,
+aside footer ul a:hover{color:#ec7404;font-size:13px;padding-bottom:10px;display:block;}
+/* Font Awesome Iconic Link */
+footer ul a i{padding-right:3px;}
+
+.copyright{max-width:120px;width:100%;font-size:11px;line-height:20px;margin:0px;color:#808285;}
+
+aside .social{margin:20px 0 40px;}
+aside .social a{
+	display:block;
+	float:left;
+	width:34px;
+	height:34px;
+	background: url('../img/social-icons.png') 0 0 no-repeat transparent;
+	margin-right:1px;
+}
+
+aside .social a[title="Twitter"]{background-position:-35px 0;}
+aside .social a[title="YouTube"]{background-position:-70px 0;}
+aside .social a[title="LinkedIn"]{background-position:-105px 0;}
+aside .social a[title="GooglePlus"]{background-position:-140px 0;}
+
+/*------------------------------------*\
+    HOME PAGE
+\*------------------------------------*/
+/* Home Promo Area */
+#homePromo{
+	max-width:1110px;
+	margin-bottom:10px;
+	background:#000;
+}
+
+#homePromo .col{
+	width:33.3333%;
+	min-height:344px;
+	color:#d5d5d5;
+	padding:13px;
+	font-size:13px;
+	position:relative;
+	background: url('../img/homePromoTwo.jpg') center top no-repeat;
+	background-size:cover;
+}
+
+#homePromo .col.first{ background-image: url('../img/homePromoOne.jpg');}
+#homePromo .col.last{ background-image: url('../img/homePromoThree.jpg');}
+
+#homePromo .col > div{margin-top:200px;}
+
+#homePromo .col h2{
+	color:#fff;
+	font-size:30px;
+	padding-bottom:15px;
+	font-weight:500;
+}
+
+#homePromo .col img{
+	position:absolute;
+	top:50px;
+	left:40px;
+	max-width:70%;
+}
+
+/******** Home Modules *********/
+
+/* Membership Module */
+#membership{
+	background: url("../img/member.jpg") no-repeat scroll center center / cover  rgba(0, 0, 0, 0);
+	margin-right:1%;
+}
+
+#membership .memberBox{
+	background: rgba(236,116,4,0.8);
+	height:126px;
+	width:163px;
+	margin-top:43px;
+	padding:30px 20px;
+	font-size:20px;
+	color:#fff;
+	text-align:center;
+}
+
+#membership .memberBox span{
+	font-size:30px;
+	line-height:50px;
+}
+
+
+#membership a{
+	
+}
+
+#membership a i{
+    font-size:80px;
+	color:rgba(236,116,4,0.8);
+	position:absolute;
+	top:60px;
+	right:20px;
+}
+
+/* Add Tech Tag Module */
+#techTag { overflow:visible;}
+#techTag .tag{
+	position:absolute;
+	top:8px;
+	right:0;
+	width:140px;
+	overflow:hidden;
+	height:95px;
+}
+
+#techTag .tag img{margin-left:14px;}
+
+#techTag .moduleBody{
+	padding:25px 20px 30px 15px;
+	font-size:16px;
+	line-height:24px;
+}
+
+#techTag form{
+	margin-top:20px;
+	position:relative;
+	font-size:14px;
+}
+
+#techTag button{
+	position:absolute;
+	right:0px;
+	top:0px;
+}
+
+/* Tech Tag Right Module */
+.right-content #techTag .tag{top:70px;}
+.right-content #techTag .moduleBody{font-size:13px;line-height:20px;padding-top:20px;}
+.right-content #techTag form{margin-top:40px;}
+
+/*******  Right Sidebar Modules *******/
+/* Today Events Module */
+#calendarModule{
+	font-size:13px;
+	color:#2b2b2b;
+	padding-bottom:15px;
+}
+
+.module .event{
+	padding:5px 15px;
+	border-bottom:1px solid #f3f3f4;
+}
+
+/* User is Attending Event */
+.module .event.attending{
+	background: rgba(255,242,0,0.2);
+}
+
+.attending-key{
+	padding:10px 0 0 15px;
+}
+
+.attending-key .avatar{vertical-align:-5px;margin-right:5px;}
+
+#hours{line-height:41px;}
+.module .event time{width:62px;}
+.module .event .title{width:130px;}
+.module .event .tickets{width:27px;text-align:center;display:block;}
+.module .event span{
+	color:#959595;
+	font-size:10px;
+	white-space:nowrap;
+}
+.module .event i{
+	font-size:16px;
+}
+#viewEvents{
+	padding:35px 15px 0 0;
+	text-align:right;
+	display:block;
+}
+
+.logged-in #viewEvents{padding-top:0px;}
+
+/** Map Module **/
+#mapModule .moduleBody{
+	padding:15px;
+	width:100%;
+}
+
+#mapModule .moduleBody > div{
+	margin-bottom:10px;
+}
+#viewMap{
+	text-align:right;
+	display:block;
+	padding-top:15px;
+}
+
+#mapModule figure{
+	position:relative;
+	max-height:160px;
+}
+
+#mapModule figcaption{
+	background-color: #AA3FC9;
+     padding: 3px 8px;
+    position: absolute;
+    top: 10px;
+    transition: all 0.75s ease-in-out 0s;
+	text-transform:uppercase;
+	font-size:1em;
+}
+
+.map-scale {
+	width:1385px;
+	height:1041px;
+	transform: scale(0.158845);
+	transform-origin: 0 0;
+    /*-ms-zoom: 0.158845; */
+	-ms-transform: scale(0.158845);
+    -ms-transform-origin: 0 0;
+    -moz-transform: scale(0.158845);
+    -moz-transform-origin: 0 0;
+    -o-transform: scale(0.158845);
+    -o-transform-origin: 0 0;
+    -webkit-transform: scale(0.158845);
+    -webkit-transform-origin: 0 0;
+	position:relative;
+}
+
+/* Rescale the map icons with js if necasary.
+   Use inverse of .map-scale ratio
+ */
+.map-scale .mapIcon{
+	position:absolute;
+	transform: scale(6.295);
+	transform-origin: 0 0;
+    -ms-transform-origin: 0 0;
+    -moz-transform: scale(6.295);
+    -moz-transform-origin: 0 0;
+    -o-transform: scale(6.295);
+    -o-transform-origin: 0 0;
+    -webkit-transform: scale(6.295);
+    -webkit-transform-origin: 0 0;
+	cursor:pointer;
+}
+
+#mapModule figcaption h4{
+	color:#fff;
+}
+
+#mapModule .ground figcaption{background-color: #646CD6;}
+#mapModule .lower figcaption{background-color: #0AB2AC;}
+
+/** The Box that houses the map avatars **/
+.mapAvatar, .map-items li.mapAvatar{
+	text-align:center;
+	background-color:#323232;
+	box-shadow:0px 7px 5px -1px rgba(1, 1, 1, 0.44);
+	padding:5px;
+}
+
+/* Box bottom arrow */
+.mapAvatar:after{
+	display:block;
+	border-style:solid;
+	border-color:transparent;
+	border-width:7px 5px;
+	border-top-color:#323232;
+	content:' ';
+	height:0;
+	width:0;
+    left: calc(50% - 5px);
+	bottom:-14px;
+    position: absolute;
+    width: 0;
+}
+
+
+/*------------------------------------*\
+    CENTER MODULES
+\*------------------------------------*/
+
+.module{
+	width:49.5%;
+	margin-bottom:10px;
+	min-height:203px;
+	position:relative;
+	overflow:hidden;
+}
+.module.full { width: 100%; }
+.module.empty { min-height: 0; }
+
+.right-content .module{
+	width:100%;
+}
+
+.moduleHeader, .second-title{
+	height:49px;
+	line-height:49px;
+	font-size:20px;
+	padding:0px 15px;
+}
+
+.moduleHeader i, .second-title i{
+	margin-right:10px;
+}
+
+/** Module Versions **/
+
+.module.light{
+	background:rgba(250,250,250,0.8)
+}
+
+.light .moduleHeader, .second-title{
+	background:rgba(0,0,0,0.7);
+	color:#fff;
+}
+	.light .moduleHeader *, .second-title * { color: #fff;}
+
+.module.dark{
+	background:rgba(0,0,0,0.8);
+	color:#58595b;
+}
+.dark .moduleHeader{
+	background:rgba(0,0,0,0.2);
+	color:#fff;
+}
+	.dark .moduleHeader * { color: #fff; }
+
+.module.dark.lighter{
+	background:rgba(0,0,0,0.6);
+	color:#58595b;
+}
+.dark.lighter .moduleHeader{
+	background:rgba(0,0,0,0.4);
+	color:#fff;
+}
+
+.dark .moduleBody{
+	color:#c9cacb;
+}
+
+.dark.lighter .moduleBody {
+	color: #a8a9aa;
+}
+
+.module footer { padding: 15px; }
+	.module footer a.button {
+		display: block;
+		padding: 0 10px;
+	}
+	.module footer a.see-all {
+		margin: 15px 0;
+	}
+
+/** Module 'More' Links **/
+a.arrows i{
+	font-size: 16px;
+    vertical-align: -1px;
+}
+
+/*------------------------------------*\
+    ACTIVITY STREAM TILES
+\*------------------------------------*/
+
+/* No Activity Promo */
+.get-activity{
+	background: url("../img/noact.jpg") no-repeat scroll center center / cover rgba(0, 0, 0, 0);
+	position: relative;
+	width:100%;
+	max-width: 1200px;
+	height: 450px;
+}
+
+.get-activity img{
+	position:absolute;
+	right:3%;
+	bottom:20%;
+}
+.get-activity > div{
+    color: #FFFFFF;
+	max-width:410px;
+	position:absolute;
+	left:0px;
+	bottom:0px;
+	padding:0 0 30px 15px;
+    width: 75%;
+}
+
+.get-activity h2{
+	font-size:30px;
+	color:#fff;
+	font-weight:400;
+	line-height:36px;
+}
+
+.get-activity p{
+	margin:10px 0px;
+}
+
+.get-activity .button{
+	display:block;
+	margin:10px 10px 0 0;
+	padding:0px 30px;
+	font-weight:400;
+	white-space:nowrap;
+}
+/* Flex Box */
+#activity{
+    /*flex-wrap: wrap;
+	align-items:flex-start;
+	display: -webkit-box;
+  	display: -moz-box;
+  	display: -ms-flexbox;
+  	display: flex;
+	align-items: flex-start;
+    display: flex;
+    flex-flow: column wrap;
+    height: 100vw; */
+    max-width: 100%;
+	position:relative;
+}
+
+.activity-tile{
+	color: #FFFFFF;
+    float: left;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    max-width: 390px;
+    position: relative;
+    width: 48%;
+}
+
+.activity-tile .info-overlay{
+	background:rgba(0,0,0,0.7);
+	padding:10px;
+	position:absolute;
+	bottom:0;
+	left:0;
+	width:100%;
+	line-height:22px;
+}
+
+/*** Dont know if this type of Box is in the Image or Overlayed
+	 But I assumed its overlayed.
+ **/
+.activity-tile .orangeBox{
+	background: rgba(236,116,4,0.8);
+    color: #FFFFFF;
+    font-size: 20px;
+    left: 0;
+    line-height: 30px;
+    padding: 20px;
+    position: absolute;
+    text-align: center;
+    bottom: 40%;
+    width: 163px;
+}
+
+.activity-tile .orangeBox span{
+	font-size:30px;
+	font-weight:bold;
+	line-height:32px;
+	text-transform:uppercase;
+}
+
+/* ON Badges DONT position them absolute, as there is no fixed height */
+.activity-tile.badge .info-overlay{
+	position:relative;
+}
+.activity-tile time{
+	display:block;
+	font-size:11px;
+	color:#ccc;
+}
+
+.activity-tile a{
+	color:#ffc58e;
+}
+
+.share .fa{
+	color:rgba(250,250,250,0.5);
+	font-size:20px;
+	position:absolute;
+	right:10px;
+	bottom:10px;
+}
+
+/**** Badge Specific Tiles ****/
+.activity-tile.badge{
+	min-height:200px;
+	align-self: center;
+}
+
+.activity-tile .badge-copy {
+	padding:20px 10px;
+}
+.activity-tile .badge-copy > div{
+	max-width:269px;
+	width:70%;
+	padding:10px 0 10px 15px;
+	font-size:1.1em;
+	text-transform:uppercase;
+	line-height:26px;
+}
+.activity-tile .badge-copy h2{
+	font-size:1.8em;
+	font-weight:bold;
+	color:#fff;
+}
+
+/*** Specific Colors for each badge ***/
+/* Collage Badge */
+.badge.badge-collage{
+	background-color:#05bae7;
+}
+/* Mad Scientist Badge */
+.badge.badge-scientist{
+	background-color:#fdc400;
+}
+/* Robotron Badge */
+.badge.badge-robotron{
+	background-color:#fb384f;
+}
+
+
+
+/*------------------------------------*\
+    MODAL WINDOW STYLES
+\*------------------------------------*/
+.modal{
+	background:#f3f3f4;
+	padding:20px 20px;
+	display:none;
+	max-width:90%;
+	position:absolute !important;
+	margin-top:0px !important;
+	margin-left:0 !important;
+	left: calc(50% - 180px) !important;
+	top: calc(50% - 150px) !important;
+}
+
+.modalHeader{margin-bottom:15px;}
+
+.modal a.close i{
+	color:#b2b2b2;
+	font-size:20px;
+	margin:-5px -5px 0 0;
+}
+
+.modal form{
+	padding:10px 0 20px 0;	
+}
+
+.social-login{
+	padding:25px 35px;;
+}
+
+.social-login a{
+	display:block;
+	width:70px;
+	height:70px;
+	background: url('../img/social-icons-big.png') 0 0 no-repeat transparent;
+	margin-right:20px;
+}
+
+.social-login a[title="Twitter"]{background-position:-91px 0;}
+.social-login a[title="Google Plus"]{background-position:-181px 0;margin-right:0;}
+
+/* Links in the Modal Window */
+.modal a.block{margin-bottom:10px;}
+
+.modal p{
+	width:80%;
+}
+
+
+/*------------------------------------*\
+    BUTTONS AND FORMS
+\*------------------------------------*/
+fieldset {
+	display: block;
+	margin: 0;
+	padding: 15px 0;
+	border: none;
+}
+/* Login Sign Up Action Buttons */
+a.button, input[type="submit"], button.button {
+	background:#ec7404;
+	line-height:33px;
+	min-width:106px;
+	text-align:center;
+	color:#fff;
+	font: 16px/33px "Open Sans";
+	text-decoration:none;
+	border:0px;
+	height:33px;
+	padding:0 10px;
+}
+
+input[type="submit"]{display:block;}
+a.button.button-secondary{background:#939393;}
+button.icon{border:0px;background:transparent;outline:none;color:rgba(255,255,255,0.5);font-size:20px;}
+/* Hover States */
+a.button:hover, input[type="submit"]:hover{background:#fa800f;}
+a.button.button-secondary:hover{background:#a9a8a8;}
+.form-actions a.button {display:inline-block;}
+.account-actions a.button{margin-right:10px;}
+
+/* Form Elements */
+.showLabels label{
+	position:absolute;
+	top:6px;
+	left:10px;
+	color:rgba(88,89,91,0.5);
+	font:light 14px/20px "Open Sans";
+}
+/* Wrap the form element when needed 
+   Usefuly when absolutely position error states/
+   messaging for a particular form field
+ */
+ 
+.form-item{
+	 position:relative;
+	 margin-bottom:10px;
+}
+
+.form-item.last-item{
+	margin-bottom:0px;
+}
+ 
+.form-item .error.active{
+	 position:absolute;
+	 top:0px;
+	 left:0px;
+	 border-top:4px solid #fb384f;
+	 width:100%;
+	 padding-top:14px;
+	 display:block;
+	 z-index:5;
+	 opacity:0;
+}
+
+input:focus + .error.active{
+	z-index:400;
+}
+
+.form-item .error .error-msg{
+	display:none;
+	transition:all 0.6 ease-in-out 0s;
+}
+
+input:focus + .error.active .error-msg{
+	display:block;
+}
+
+.form-item .error.active p{
+	color:#58595b;	
+}
+
+.form-item .error-msg{
+	border:1px solid #d0d0d0;
+	background:#f7e3e5;
+	padding:15px;
+}
+
+.form-item .error .error-msg:before{
+	border:10px solid transparent;
+	border-left-color:#f7e3e5;
+	display:block;
+	content:'';
+	height:0;
+	width:0;
+	-webkit-transform:rotate(45deg);
+	-moz-transform:rotate(45deg);
+	-ms-transform:rotate(45deg);
+	-o-transform:rotate(45deg);
+	transform:rotate(45deg);
+	position:absolute;
+	top:5px;
+	right:-10px;
+}
+
+.form-item .error h4{
+	 color:#fb384f;
+	 margin-bottom:5px;
+	 font-weight:400;
+	 font-size:16px;
+}
+
+/* Global Error Messaging. Used at the top of forms */
+.global-error{
+	width:100%;
+	display:none; /* Uses jQuery to display */
+	background:#f7e3e5;
+	line-height:18px;
+	color:#fb384f;
+	margin:0 0 10px 0;
+	border-left: 4px solid #FB384F;
+}
+
+
+.global-error p{
+	padding:15px 10px 15px 15px;
+	border:1px solid #d0d0d0;
+	border-left:0px;
+	width:100%;
+}
+
+.global-error p:before{
+	content: "\f071 ";
+	font-family:"FontAwesome";
+	padding:0 5px 0 0;
+	font-size:16px;
+}
+
+/* Global Search */
+#global-search{position:relative;margin-left:40px;}
+#global-search input[type="search"]{line-height:inherit;height:57px;background:rgba(0,0,0,0.2);width:250px;color:rgba(250, 250, 250, 0.8);}
+#global-search .icon{position:absolute;right:20px;height:57px;line-height:57px;top:0px;}
+
+input[type="text"],
+input[type="password"],
+input[type="search"],
+textarea{
+	border:0px;
+	outline:none;
+	margin:0px;
+	padding:0 0 0 10px;
+	color:rgba(88,89,91,1);
+	font:normal 13px/20px "Open Sans";
+	height:30px;
+	line-height:28px;
+	width:100%;
+	background:rgba(0,0,0,0.1);
+}
+
+/** Remove Chrome Autofill Color **/
+input:-webkit-autofill {
+        -webkit-box-shadow: 0 0 0px 1000px #dadadb inset;
+    }
+
+.dark input[type="text"]{
+	border:1px solid #58595b;
+	background:#434344;
+	color:#a7a9ac;
+}
+
+button{
+	border:0px;;
+	font-size:16px;
+	line-height:30px;
+	padding:0 10px;
+}
+
+button.orange{
+	background:#ec7404;
+	color:#fff;
+}
+button.orange .fa { color: #fff; }
+
+/* Custom Check Boxes */
+
+.checkwrap input[type="checkbox"]{
+    opacity: 0;
+    z-index: 0;
+	width:0;
+	position:absolute;
+	left:0;
+}
+
+.checkwrap{
+	position:relative;
+}
+
+.checkwrap label{
+	line-height:18px;
+	padding-left:25px;
+	cursor:pointer;
+}
+.checkwrap label:before{
+	background: url("../img/checkboxes.png") no-repeat scroll left -24px rgba(0, 0, 0, 0);
+    content: " ";
+    display: block;
+    height: 19px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 19px;
+}
+
+input[type="checkbox"]:checked + label:before{
+	background-position:left 0;
+}
+
+
+/*------------------------------------*\
+    Custom Fake Select Menu
+\*------------------------------------*/
+/** Select Menu W/ Avatars - Fake Select menu **/
+ul.fake-select {
+	display: inline-block;
+	width: 100%;
+}
+ul.fake-select ul > li {
+	width:100%;
+	display:block;
+	padding:3px 0;
+	cursor:pointer;
+}
+
+ul.fake-select ul > li:hover {
+	background: none repeat scroll 0 0 #58595B;
+    color: #FFFFFF;
+}
+ul.fake-select > li > a {
+	background: none repeat scroll 0 0 rgba(0, 0, 0, 0.1);
+    border: 0 solid rgba(0, 0, 0, 0);
+    color: #58595B;
+    cursor: pointer;
+    display: block;
+    font-family: "Open Sans";
+    height: 30px;
+    line-height: 30px;
+    min-width: 170px;
+    outline: medium none;
+    overflow: hidden;
+    padding:0;
+    position: relative;
+    text-decoration: none;
+    text-indent: 10px;
+    width: 100%;
+    z-index: 10;
+}
+
+ul.fake-select > li > a span{
+	margin-top:3px;
+}
+ul.fake-select > li:hover a{
+	text-decoration: none;
+}
+
+ul.fake-select > li:hover ul{
+
+}
+
+ul.fake-select > li ul a{
+	cursor:pointer;
+}
+ul.fake-select > li > a:after {
+	content: "";
+    display: inline-block;
+    font-family: FontAwesome;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    position: absolute;
+    right: 10px;
+    top: 11px;
+}
+ul.fake-select > li ul {
+	position: absolute;
+	z-index: 600;
+	left: 0;
+	top: 30px;
+	width: 100%;
+	overflow: hidden;
+	background-color: #ccc;
+	-webkit-transition: max-height 0.5s ease-in-out;
+	-moz-transition: max-height 0.5s ease-in-out;
+	-ms-transition: max-height 0.5s ease-in-out;
+	-o-transition: max-height 0.5s ease-in-out;
+	transition: max-height 0.5s ease-in-out;
+	overflow-x: hidden;
+    overflow-y: auto;
+	background:#d0d0d1;
+	min-width:170px;
+	padding:3px 0px;
+	color:#58595b;
+	text-indent:10px;
+	line-height:23px;
+	display:none;
+	max-height:250px;
+}
+
+ul.fake-select ul li:hover, ul.fake-select ul li.selected{
+	 background-color:#58595b;
+	 color:#fff;
+ }
+.ui-selectmenu-menu .ui-selectmenu-menu-dropdown {
+    overflow-x: hidden;
+    overflow-y: auto;
+	background:#d0d0d1;
+	min-width:170px;
+	padding:3px 0px;
+	color:#58595b;
+	text-indent:10px;
+	line-height:23px;
+}
+ul.fake-select > li:hover ul {
+}
+
+/*------------------------------------*\
+    jQueryUI Select Menu
+\*------------------------------------*/
+select{width:100%;}
+
+.select-wrap{
+	position:absolute;
+	right:0px;
+	top:-50px;
+}
+.ui-selectmenu-menu {
+    display: none;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+	z-index:5 !important;
+	font-family:"Open Sans";
+}
+
+.ui-selectmenu-menu.ui-selectmenu-open {
+	z-index:9999 !important;
+}
+
+.ui-selectmenu-menu a{
+	color:#58595b;
+	text-decoration:none;
+	display:block;
+	width:100%;
+	line-height:24px;
+}
+
+.ui-selectmenu-icon:before{
+	content: "\f078";
+    display: inline-block;
+    font-family: FontAwesome;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    position: absolute;
+    right: 10px;
+    top: 11px;
+}
+
+.ui-selectmenu-menu-dropdown li a:hover, .ui-selectmenu-item-selected a{
+	 background:#58595b;
+	 color:#fff;
+ }
+.ui-selectmenu-menu .ui-selectmenu-menu-dropdown {
+    overflow-x: hidden;
+    overflow-y: auto;
+	background:#d0d0d1;
+	min-width:170px;
+	padding:3px 0px;
+	color:#58595b;
+	text-indent:10px;
+	line-height:23px;
+}
+.ui-selectmenu-menu .ui-menu .ui-selectmenu-optgroup {
+    border: 0 none;
+    font-size: 1em;
+    font-weight: bold;
+    height: auto;
+    line-height: 1.5;
+    margin: 0.5em 0 0;
+    padding: 2px 0.4em;
+}
+.ui-selectmenu-open {
+    display: block;
+	z-index:1;
+	padding-top:0px;
+}
+
+.ui-selectmenu-open:before{
+}
+
+.ui-selectmenu-button, .ui-selectmenu, .ui-selectmenu-button:hover, .ui-selectmenu:hover {
+    cursor: pointer;
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+   	border:0px solid transparent;
+	color:#58595b;
+	background:rgba(0,0,0,0.1);
+	padding:0;
+	min-width:170px;
+	z-index:10;
+	display:block;
+	font-family:"Open Sans";
+	height:30px;
+	text-indent:10px;
+	outline:none;
+	width:170px;
+	line-height:30px;
+	text-decoration:none;
+}
+
+
+/*------------------------------------*\
+    USER AVATARS
+\*------------------------------------*/
+/* Use the Character Map on your Computer w/ Bariol font
+to determin which character maps to which icon 
+ex: 't' maps to the lego man head when wrapped in the 
+avatar class below */ 
+.avatar{
+	font-family:"Bariol";
+	font-size:25px;
+	font-style:normal;
+	position:relative;
+	z-index:1;
+}
+.avatar:hover{text-decoration:none;}
+
+/*------------------------------------*\
+    SEMANTIC STYLES
+\*------------------------------------*/
+.center{text-align:center;}
+.left{float:left;}
+.right{float:right;}
+.hidden,
+.mobile{display:none;}
+i{font-style:normal;}
+.block{display:block;}
+
+
+/*------------------------------------*\
+    CONFIRMATION OVERLAY STYLES
+\*------------------------------------*/
+
+.confirmation-overlay{
+	z-index:0; 
+	width:100%;
+	height:100%;
+	position:fixed;
+	background-color:rgba(188,190,192,0.8);
+	text-align:center;
+	top:0;
+	left:0;
+	display:none;
+}
+
+.confirmation-overlay .message{
+	width:auto;
+	margin:220px auto 0 auto;
+	color:#fff;
+	font-size:16px;
+	font-weight:bold;
+}
+
+.confirmation-overlay .message:before{
+	display:block;
+	font-size:48px;
+	margin-bottom:25px;
+	font-family:"FontAwesome";
+	content:'\f110';
+	-webkit-animation: 2s linear 0s normal none infinite spin;
+	   -moz-animation: 2s linear 0s normal none infinite spin;
+		-ms-animation: 2s linear 0s normal none infinite spin;
+		 -o-animation: 2s linear 0s normal none infinite spin;
+		 	animation: 2s linear 0s normal none infinite spin;
+}
+
+.confirmation-overlay .message.done:before{
+	content:'\f00c';
+	-webkit-animation: none;
+	   -moz-animation: none;
+		-ms-animation: none;
+		 -o-animation: none;
+		 	animation: none;
+}
+
+/*------------------------------------*\
+    RESPONSIVE
+\*------------------------------------*/
+
+/* For Very Large Screens and Above */
+@media only screen and (min-width:1500px) {
+#homePromo{float:left;}
+section.main .module{max-width:550px;}
+.no-right-sidebar section.main .module{max-width:none;}
+#homePromo .col img {max-width:50%;}
+}
+
+@media only screen and (min-width:1680px) {
+#homePromo{margin-right:1%;max-width:700px;}
+section.main .module{max-width:350px;}
+}
+
+/* Desktop Break Point */
+@media only screen and (max-width:1155px) {
+section.main{padding:20px;}
+section.main .module{
+	width:100%;
+}
+
+/*** Logged in Activity Stream tiles, expand to 100% ***/
+.activity-tile{
+	width: calc(100% - 0px);
+	max-width:585px;
+	margin-right:0px;
+	float:none;
+}
+
+}
+/* Tablet Break Point 768px */
+@media only screen and (max-width:1024px) {
+.wrapper{padding-right:20px;}
+.no-right-sidebar .wrapper{padding:0px;}
+/* Header Styles  */
+#header .inner{padding:0 0 0 15px;}
+#global-search input[type="search"]{width:180px;}
+
+/* Logo Resize/Repostiion svg */
+.logo{height:37px;width:39px;left:57px;}
+.hamburger{display:block;padding:5px;margin-top:13px;}
+.expanded .hamburger{background:#000;}
+/* Main Section */
+section.main{width:calc(100% - 250px);}
+.no-right-sidebar section.main{
+	width:100%;
+	margin:0 auto;
+	max-width:none;
+	padding:20px;
+}
+/* Global Side Nav */
+.side-nav{border-top-width:11px;}
+.side-nav > ul > li > a{padding-left:20px;}
+.side-nav .toggle-arrow{display:none;} /* Remove the toggle arrow, pre expand sub menus */
+.side-nav ul ul{display:block;}
+
+/* Hide the Nav off Screen */
+aside{
+	position:absolute;
+	top:57px;
+	z-index:1000;
+	-webkit-transition: .6s ease-in-out;
+	   -moz-transition: .6s ease-in-out;
+	    -ms-transition: .6s ease-in-out;
+	     -o-transition: .6s ease-in-out;
+	        transition: .6s ease-in-out;
+	-webkit-transform:translateX(-320px);
+	   -moz-transform:translateX(-320px);
+	    -ms-transform:translateX(-320px);
+	     -o-transform:translateX(-320px);
+	        transform:translateX(-320px);
+}
+/* Slide the Nav in from Offscreen */
+.expanded aside{
+	-webkit-transform:translateX(0px);
+	   -moz-transform:translateX(0px);
+	    -ms-transform:translateX(0px);
+	     -o-transform:translateX(0px);
+	        transform:translateX(0px);
+}
+
+
+
+}
+
+/* Added another break point for the Home Promo Area
+   Wasnt degrading well b/t the Tablet and Phones resolutions
+*/
+@media only screen and (max-width:770px) {
+section.main{max-width:460px;}
+
+#homePromo{background:transparent;}
+#homePromo .col{
+	float:none;
+	width:100%;
+	max-height:350px;
+	min-height:250px;
+	background-image: url('../img/mobilePromoTwo.jpg');
+	max-width:none;
+	background-size:cover;
+	background-position:center center;
+	padding:25px;
+}
+
+#homePromo .col.first{background-image: url('../img/mobilePromoOne.jpg');}
+#homePromo .col.last{background-image: url('../img/mobilePromoThree.jpg');}
+#homePromo .col > div{margin-top:150px;}
+
+#homePromo .col img {right:13px;left:auto;top:8px;max-width:50%;}
+
+.home section .module{width:100%;}
+
+.get-activity .button{padding:0 10px;}
+
+
+}
+	
+@media only screen and (max-width:640px) {
+.wrapper{padding-right:0px;}
+/* Global Helper Classes */
+.hide-mobile, .hide-mobile.fa{display:none !important; }
+.mobile{display:inherit;}
+
+/* Header Styles */
+#global-search{margin-left:15px;}
+#global-search input[type="search"]{width:100%;color:transparent;transition: .6s ease-in-out;padding-left:0px;text-indent:30px;}
+/* Set the Form width, then animate the form width */
+#global-search{
+	width:57px;
+	-webkit-transition: .6s ease-in-out;
+	   -moz-transition: .6s ease-in-out;
+	    -ms-transition: .6s ease-in-out;
+	     -o-transition: .6s ease-in-out;
+	        transition: .6s ease-in-out;
+}
+#global-search .icon{right:14px;}
+/* Use Label to expand/hide the full search bar */
+#global-search label, #global-search label i{
+	display:block;
+	position:absolute;
+	top:0px;
+	left:0px;
+	height:57px;
+	line-height:57px;
+	width:57px;
+	z-index:2;
+	color:transparent;
+}
+
+#global-search.expanded label{width:10px;left:8px}
+#global-search.expanded input[type="search"]{color:rgba(250,250,250,0.5);}
+#global-search.expanded label i{color:#656565;font-size:20px;}
+#global-search.expanded{width:160px;}
+
+/** For Logged In Users, there's more content in the header,
+    so make the search expand less
+**/
+
+.logged-in #global-search.expanded {
+    margin-left: 0;
+    width: 130px;
+}
+
+/** Reposition Avatar on Mobile **/
+#header .account-options > li > a .avatar {
+    vertical-align:-5px;
+}
+
+/* Mobile SubHeader Styles */
+.mobile.subheader{width:100%;padding:10px 20px 15px;}
+
+/* Mobile Tabs */
+/*  The links at the top control which view
+	to show in the mobile context.
+*/
+#mobileTabs{margin-top:10px;}
+#mobileTabs li{
+	display:inline-block;
+	margin: 2% 5% 2% 0;
+}
+#mobileTabs li:last-child{margin-right:0px;}
+	
+#mobileTabs a{
+	font-size:18px;
+	font-weight:300;
+	white-space:nowrap;
+}
+
+#mobileTabs a.active{
+	font-size:24px;
+	color:#4a4949;
+	text-decoration:none;
+}
+
+.mobile-tabbed{display:none}
+.mobile-tabbed.active{display:block;}
+	
+
+/* Logged Out User */
+.account-actions .mobile{position:relative;font-size:30px;}
+.account-actions .mobile span{font-family:"MetaNormal";color:#f2f2f2;font-size:24px;line-height:24px;position:absolute;top:4px;left:7px;}
+
+/* Global Side Nav */
+aside{width:100%;max-width:320px;}
+
+/* Main Sections */
+section.main{
+	width:100%;
+	float:none;
+	padding:0;
+	max-width:none;
+}
+.right-content{
+	width:100%;
+	float:none;
+	margin-top:0;
+	padding:0 20px;
+}
+
+/* Mobile Specific Content */
+a.button.mobile{margin-right:0px;}
+
+.mobile.account-actions{
+	position:relative;
+	padding-top:0px;
+	margin-bottom:10px;
+}
+
+.mobile.account-actions div{
+	position:absolute;
+	bottom:10px;
+	left:calc(50% - 116px);
+}
+
+/* My Tech Options Menu */
+#header .account-options > li,#header .notifications {
+    position: static;
+}
+
+#header .account-options ul, .notifications-list {
+	width:100%;
+}
+.notifications-list{
+	top:50px;
+	right:0px;
+	box-shadow:1px 1px 2px 3px rgba(0, 0, 0, 0.2);
+}
+.notifications-list:before {
+	top:-26px;
+	right:104px;
+	-webkit-transform: rotate(-90deg);
+	   -moz-transform: rotate(-90deg);
+	    -ms-transform: rotate(-90deg);
+	     -o-transform: rotate(-90deg);
+	        transform: rotate(-90deg);
+}
+
+.notifications-list .item p {
+    max-width: none;
+}
+
+/* Right Side Content Modified Styles */
+.module .event time{width:25%;}
+.module .event .title{width:60%;margin-right:10px;}
+
+/** Resize the SVGs for the map module **/
+#mapModule figure{
+	max-height:420px;
+}
+
+#mapModule figcaption{
+    bottom: 84.5%;
+    left: 4.5%;
+    padding: 3px 18px;
+    top: auto;	
+}
+.map-scale {
+	transform: scale(0.39928);
+    -ms-zoom: 0.39928;
+    -moz-transform: scale(0.39928);
+    -o-transform: scale(0.39928);
+    -webkit-transform: scale(0.39928);
+}
+
+/* Social Login Icons */
+.social-login{padding:25px 0;;}
+
+.social-login a{
+	display:block;
+	width:50px;
+	height:50px;
+	background-size:cover;
+}
+
+.social-login a[title="Twitter"]{background-position:-65px 0;}
+.social-login a[title="Google Plus"]{background-position:-130px 0;margin-right:0;}
+
+/**** Logged In Activity Screen on HomePage ***/
+#activity{
+	width:100%;
+	padding:0px 20px;
+	float:none;
+	margin-top:40px;
+}
+
+#activity .activity-tile{
+	width:100%;
+	float:none;
+	max-width:none;
+}
+
+#activity .select-wrap{
+	width:100%;
+	position:relative;
+	margin:-20px auto 20px auto;
+	top:0;
+	right:0;
+}
+
+/*** Select Menu Resize on Mobile ***/
+.select-wrap {
+    width: calc( 100% - 40px);
+	right:20px;
+}
+.ui-selectmenu-button, .ui-selectmenu, .ui-selectmenu-button:hover, .ui-selectmenu:hover{width:100% !important;}
+.ui-selectmenu-menu .ui-selectmenu-menu-dropdown, .ui-selectmenu-menu a {
+    width: 100% !important;
+}
+.ui-selectmenu-menu {
+    width: calc(100% - 40px) !important;
+}
+
+/** Modal for Mobile **/
+.modal{
+	max-width:90%;
+	left: 5% !important;
+	width:100% !important;
+	
+}
+
+}
+
+@media only screen and (max-width:460px){
+.get-activity > div{
+	min-width:345px;
+}
+.get-activity h2, .get-activity p{
+	width:70%
+}
+
+.get-activity h2{
+	font-size:22px;
+	line-height:28px;
+}
+
+
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio:1.5),
+	   only screen and (min-resolution:144dpi) {
+
+}
+
+/*------------------------------------*\
+    PRINT
+\*------------------------------------*/
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
+

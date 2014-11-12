@@ -1,0 +1,437 @@
+<!doctype html>
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <title>The Tech Smart Museum - Account Settings</title>
+        
+        <!-- meta -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!-- dns prefetch -->
+        <link href="//www.google-analytics.com" rel="dns-prefetch">
+        
+        <!-- icons -->
+		<link href="img/favicon.ico" rel="shortcut icon">
+		<link href="img/touch.png" rel="apple-touch-icon-precomposed">
+		
+        <!-- stylesheets -->
+        <link rel="stylesheet" href="css/normalize.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/account.css">
+        
+        <!-- font awesome css -->
+        <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css" rel="stylesheet">
+
+        <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+        <!-- load jQuery from Goolge CDN -->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    </head>
+    <body class="account-settings logged-in">
+        <header id="header" role="banner">
+        	<a href="/" title="Home" class="logo"><img src="img/logo.svg" alt="the Tech" width="100%" /></a>
+        	<div class="inner clear">
+            	<a href="javascript:void(0);" class="hamburger left"><img src="img/hamburger-nav.png" alt="Navigation" /></a>
+                <div class="right">
+                	<div class="account-actions clear left">
+                        <div class="notifications left">
+                            <a href="#" class="note-control" onClick="jQuery('.notifications-list').slideToggle('slow');">3</a>
+                            <div class="notifications-list clear">
+                                <h2 class="left">Notifications</h2><a href="#" class="right"><i class="fa fa-gear"></i></a>
+                                <div class="item clear">
+                                    <img src="img/notificationTech.png" class="left">
+                                    <p class="left">
+                                        Your imax movie starts in 30 mins. <a href="#">My Ticket</a>
+                                    </p>
+                                </div><!-- end item -->
+                                <div class="item clear">
+                                    <img src="img/notificationTech.png" class="left">
+                                    <p class="left">
+                                        You have a Petri Dish. Claim your <a href="#">Petri Dish.</a>
+                                    </p>
+                                </div><!-- end item -->
+                                <div class="item clear">
+                                    <i class="fa fa-users left"></i>
+                                    <p class="left">
+                                        Your <a href="#">group</a> visited on 2/14/2014.
+                                    </p>
+                                </div><!-- end item -->
+                                <a href="#" title="See All" class="all-notes orange">See All</a>                                                                                              
+                            </div><!-- end notifications list -->
+                        </div><!-- end notifications -->
+                   		<ul class="account-options left">
+                        	<li><a href="#" onClick="jQuery('#profile-menu').slideToggle('slow');"title="Account Options"><span class="avatar" style="color:#fdc400">t</span> <span class="hide-mobile">Jupiter</span> <i class="fa fa-chevron-down hide-mobile"></i></a>
+                            	<ul id="profile-menu">
+                                	<li><a href="" title="Profile">Profile</a></li>
+                                    <li class="active"><a href="" title="Settings">Settings</a></li>
+                                    <li><a href="" title="Help Center">Help Center</a></li>
+                                    <li><a href="" title="Log Out">Log Out</a></li>
+                                </ul>
+                            </li>
+                       </ul>
+                	</div><!-- end account actions -->
+                	<form class="left" action="index.html" method="get" id="global-search" name="global-search">
+                		<label for="search" class="hidden"><i class="fa fa-times"></i>Search</label>
+                		<input type="search" name="search" id="search" />
+                    	<button type="submit" class="icon"><i class="fa fa-search"></i></button>
+                	</form><!-- end form -->
+                </div><!-- end right -->
+        	</div><!-- end inner -->
+        </header><!-- end header -->
+        <div class="wrapper clear">
+        	<aside class="left clear">
+            	<nav role="navigation" class="side-nav">
+                	<ul>
+                    	<li>
+                        	<span class="toggle-arrow"></span>
+                        	<a href="#" title="My Tech">My Tech</a>
+                    		<ul class="toggle-target">
+                        		<li><a href="#" title="Activity">Activity</a></li>
+                            	<li><a href="#" title="Plan My Visit">Plan My Visit</a></li>
+                            	<li><a href="#" title="Group Visits">Group Visits</a></li>
+                       		</ul>
+                        </li>
+                    	<li>
+                        	<span class="toggle-arrow"></span>
+                        	<a href="#" title="@ the Museum">@ the Museum</a>
+                    		<ul class="toggle-target">
+                        		<li><a href="#" title="My Tech">Overview</a></li>
+                            	<li><a href="#" title="Exhibits">Exhibits</a></li>
+                            	<li><a href="#" title="Map">Map</a></li>
+                            	<li><a href="#" title="Calendar">Calendar</a></li>
+                       		</ul>
+                        </li>
+                    </ul>
+                </nav><!-- end side-nav -->
+                <footer>
+                	<ul>
+                    	<li><a href="http://tickets.thetech.org/production.asp" target="_blank" title="Get Tickets"><i class="fa fa-ticket"></i>Get Tickets</a></li>
+                        <li><a href="http://account.thetech.org/Join.aspx" target="_blank" title="Become a Member">Become a Member</a></li>
+                        <li><a href="http://account.thetech.org/contribute.aspx" target="_blank" title="Donate">Donate</a></li>
+                        <li><a href="http://www.thetech.org" target="_blank" title="Museum Home">Museum Home</a></li>
+                    </ul>
+                	<div class="social clear">
+                		<a href="http://www.facebook.com/TheTechMuseum" title="Facebook" target="_blank"></a>
+                    	<a href="http://twitter.com/TheTechMuseum/" title="Twitter" target="_blank"></a>
+                    	<a href="http://www.youtube.com/user/TheTechMuseum" title="YouTube" target="_blank"></a>
+                    	<a href="https://www.linkedin.com/company/166414" title="LinkedIn" target="_blank"></a>
+                	</div><!-- end social -->
+                    <p class="copyright">
+                    	 © 2014 The Tech Museum of Innovation All rights reserved.
+                    </p><!-- end copyright -->
+                </footer>
+            </aside>
+        	<section class="main left clear">
+            	<div class="mobile subheader">
+                	<a href="#" class="button" title="Merge with Existing Account">Merge with Existing Account</a>
+                    <ul id="mobileTabs">
+                        <li><a href="#accountForm" title="Account Settings" class="active">Account</a></li>
+                        <li><a href="#interests" title="Interests">Interests</a></li>
+                        <li><a href="#socialSharing" title="Social">Social</a></li>
+                    </ul><!-- end mobile tabs -->
+                </div><!-- end mobile subheader -->
+            	<h1 class="page-title hide-mobile">Account Settings</h1>
+                <div id="accountForm" class="light mobile-tabbed active">
+                    <div class="global-error" style="display:block">
+                			<p>Mobile number not valid</p>
+                	</div><!-- end global error -->
+                	<form name="account-settings" method="post" action="" class="clear">
+                        <div class="formRow clear">
+                            <label for="username" class="left">Username</label>
+                            <div class="form-item left">
+                            	<input type="text" name="username" id="username" value="" />
+                                <div class="error text-field">
+                                	<div class="error-msg">
+                                		<h4></h4>
+                                        <p></p>
+                                    </div><!-- end error-msg -->
+                                </div><!-- end .error.text-field --> 
+                            </div><!-- end form item -->
+                            <div class="form-instructions left">
+                            </div><!-- end form-instructions -->
+                        </div><!-- end form row -->
+                        <div class="formRow clear">
+                            <label for="email" class="left">Email</label>
+                            <div class="form-item left">
+                            	<input type="text" name="email" id="email" value="" />
+                                <div class="error active text-field">
+                                	<div class="error-msg">
+                                		<h4>Not a Valid Email</h4>
+                                        <p>Your email contains invalid characters.</p>
+                                    </div><!-- end error-msg -->
+                                </div><!-- end .error.text-field --> 
+                            </div><!-- end form item -->
+                            <div class="form-instructions left">
+                            	<p>Optional</p>
+                            </div><!-- end form-instructions -->
+                        </div><!-- end form row -->
+                        <div class="formRow clear">
+                            <label for="password" class="left">Password</label>
+                            <div class="left form-item">
+                                <div class="showLabels">
+                                	<label for="current-password">Current Password</label>
+                                    <input type="password" name="current-password" id="current-password"  autocomplete="off"/>
+                                    <div class="error active text-field">
+                                        <div class="error-msg">
+                                            <h4>Some</h4>
+                                            <p>test</p>
+                                        </div><!-- end error-msg -->
+                                    </div><!-- end .error.text-field --> 
+                                </div><!-- end form item -->
+                                <div class="showLabels">
+                                	<label for="new-password">New Password</label>
+                                    <input type="password" name="new-password" id="new-password" autocomplete="off" />
+                                    <div class="error active text-field">
+                                        <div class="error-msg">
+                                            <h4>Some</h4>
+                                            <p>Testy</p>
+                                        </div><!-- end error-msg -->
+                                    </div><!-- end .error.text-field --> 
+                                </div><!-- end form item -->
+                                <div class="showLabels">
+                                	<label for="re-new-password">Retype New Password</label>
+                                    <input type="password" name="re-new-password" id="re-new-password" autocomplete="off" />
+                                    <div class="error active text-field">
+                                        <div class="error-msg">
+                                            <h4>Some</h4>
+                                            <p>tester</p>
+                                        </div><!-- end error-msg -->
+                                    </div><!-- end .error.text-field --> 
+                                </div><!-- end form item -->
+                            </div><!-- end left -->
+                            <div class="form-instructions left">
+                            	<p>Passwords must be at least 6 characters long and contain a letter and a number</p>
+                            </div><!-- end form-instructions -->
+                        </div><!-- end form row -->
+                        <div class="formRow clear">
+                            <label for="language" class="left">Language</label>
+                            <div class="form-item left">
+                            	<select name="language" id="language">
+                                	<option>English</option>
+                                    <option>Spanish</option>
+                                </select>
+                                <div class="error text-field">
+                                	<div class="error-msg">
+                                		<h4></h4>
+                                        <p></p>
+                                    </div><!-- end error-msg -->
+                                </div><!-- end .error.text-field --> 
+                            </div><!-- end form item -->
+                            <div class="form-instructions left">
+                            </div><!-- end form-instructions -->
+                        </div><!-- end form row -->
+                        <div class="formRow clear">
+                            <label for="avatar" class="left">Avatar</label>
+                            <div class="form-item left">
+                            	<ul class="fake-select">
+                                	<li>
+                                		<a href="#" title="Choose Avatar" class="control">Choose Avatar</a>
+                                        <ul>
+                                            <li><a href="#" data-value="lego-yellow" class="avatar lego-yellow"></a></li>
+                                            <li><a href="#" data-value="lego-blue" class="avatar lego-blue"></a></li>
+                                            <li><a href="#" data-value="doll-red" class="avatar doll-red"></a></li>
+                                            <li><a href="#" data-value="doll-green" class="avatar doll-green"></a></li>
+                                        </ul>
+                                	</li>
+                                </ul><!-- end fake-select -->
+                                <input type="hidden" value="lego-yellow" name="avatar" id="avatar" />
+                            </div><!-- end form item -->
+                            <div class="form-instructions left">
+                            </div><!-- end form-instructions -->
+                        </div><!-- end form row -->
+                        <div class="formRow clear">
+                            <label for="privacy" class="left">Privacy</label>
+                            <div class="form-item left">
+                            	<select name="privacy" id="privacy">
+                                	<option>Members of my Group</option>
+                                    <option>Only me</option>
+                                </select>
+                                <div class="error text-field">
+                                	<div class="error-msg">
+                                		<h4></h4>
+                                        <p></p>
+                                    </div><!-- end error-msg -->
+                                </div><!-- end .error.text-field --> 
+                            </div><!-- end form item -->
+                            <div class="form-instructions left">
+                            	<p>Who can see my Profile, my in-museum Map location, and myTech Activity media?</p>
+                            </div><!-- end form-instructions -->
+                        </div><!-- end form row -->
+                        <div class="formRow clear">
+                            <label for="alerts" class="left">Text Alerts</label>
+                            <div class="form-item left">
+                            	<div class="removable phone-number clear">
+                                	<span class="left">(310)-555-1234</span>
+                            		<a href="#" class="remove left"><i class="fa fa-times"></i></a>
+                                </div><!-- end phone-number -->
+                                <a href="#alerts" class="button left open-modal" id="mobile-phone" title="Add Mobile Number">Add Mobile Number</a>
+                            </div><!-- end form item -->
+                            <div class="form-instructions left">
+                            	<p>Optional: Enter your mobile number to recieve text alerts from the Tech</p>
+                            </div><!-- end form-instructions -->
+                        </div><!-- end form row -->
+                        <div class="account-buttons right clear">
+                        	<a href="#" class="button button-secondary left">Cancel</a>
+                            <input type="submit" class="button left" value="Change" />
+                        </div><!-- end account buttons -->
+                    </form>
+                </div><!-- end account form -->
+        	</section><!-- end main -->
+            <div class="right-content left">
+            	<a href="#" class="button hide-mobile" title="Merge with Existing Account">Merge with Existing Account</a>
+            	<div id="interests" class="module light mobile-tabbed">
+                	<div class="moduleHeader">
+                    	<i class="fa fa-star"></i>Interests
+                    </div><!-- end moduleHeader -->
+                    <div class="moduleBody clear">
+                    	<div class="item clear removable">
+                        	<a href="#" title="Space" class="left">Space</a>
+                            <span class="total">16 exhibits</span>
+                            <a href="#" title="Remove" class="remove"><i class="fa fa-times"></i></a>
+                        </div><!-- end item -->
+                        <div class="item clear removable">
+                        	<a href="#" title="Biology" class="left">Biology</a>
+                            <span class="total">12 exhibits</span>
+                            <a href="#" title="Remove" class="remove"><i class="fa fa-times"></i></a>
+                        </div><!-- end item -->
+                        <div class="item clear removable">
+                        	<a href="#" title="Computing" class="left">Computing</a>
+                            <span class="total">8 exhibits</span>
+                            <a href="#" title="Remove" class="remove"><i class="fa fa-times"></i></a>
+                        </div><!-- end item -->
+                        <div class="item clear removable">
+                        	<a href="#" title="Robots" class="left">Robots</a>
+                            <span class="total">5 exhibits</span>
+                            <a href="#" title="Remove" class="remove"><i class="fa fa-times"></i></a>
+                        </div><!-- end item -->
+                        <div>
+                        <select name="interests" id="interests">
+                        	<option>Add More Interests</option>
+                            <option value="marine">Marine</option>
+                            <option value="electronics">Electronics</option>
+                        </select>
+                        </div>
+                        <a href="#" title="View all interests" class="right">View all interests <i class="fa fa-angle-double-right"></i></a>
+                    </div><!-- end moduleBody -->
+                </div><!-- end module -->
+                <div id="socialSharing" class="module light mobile-tabbed">
+                	<div class="moduleHeader">
+                    	<i class="fa fa-share-alt"></i>Social Sharing
+                    </div><!-- end moduleHeader -->
+                    <div class="moduleBody">
+                    	<p>
+                        	Connect your social media account to My Tech for one-click sign in and easier social sharing. The Tech promises to never share or use your social media personal information for commercial purposes.
+                        </p>
+                    	<div class="social clear">
+                        	<img src="img/fb-40.png" width="40px" class="left" alt="jupiter.planet" title="jupiter.planet"/>
+                            <div class="checkWrap left">
+                                <input type="checkbox" name="facebook" class="toggle"/>
+                                <label for="facebook"></label>
+                           </div><!-- end checkWrap -->
+                        </div><!-- end social -->
+                        <div class="social clear">
+                        	<img src="img/twitter-40.png" width="40px" class="left" alt="@Jupiter" title="@Jupiter"/>
+                            <div class="checkWrap left">
+                                <input type="checkbox" name="twitter" class="toggle"/>
+                                <label for="twitter"></label>
+                           </div><!-- end checkWrap -->
+                        </div><!-- end social -->
+                        <div class="social clear">
+                        	<img src="img/google-40.png" width="40px" class="left" alt="jupiter" title="jupiter" />
+                            <div class="checkWrap left">
+                                <input type="checkbox" name="google" class="toggle"/>
+                                <label for="google"></label>
+                           </div><!-- end checkWrap -->
+                        </div><!-- end social -->
+                    </div><!-- end moduleBody -->
+                </div><!-- end module -->
+            </div><!-- end right content -->
+        </div><!-- end wrapper -->
+		<footer>
+        	<!-- Attach scripts -->
+            <script src="js/plugins.js"></script>
+            <script src="js/scripts.js"></script>
+            
+            <script>
+             			//jQuery UI controls for Select Menu
+            $(function () {
+                // Initiate Select Method
+                $("select").selectmenu({
+                    change: function (e, object) {
+                        //Set the select menuoption to selected, may not need 	
+                        $(this).find("option[value='" + object.value + "']").attr('selected', 'selected');
+                    }
+                });
+				
+				$(window).resize( function(){
+					$("select").selectmenu("destroy").selectmenu();
+				});
+				
+				$('.modal').easyModal({
+						top: 'auto',
+						autoOpen: false,
+						overlayOpacity: 0.5,
+						overlayColor: "#000",
+						overlayClose: true,
+						closeOnEscape: true,
+						onShow: function (dialog) {
+                			$(".modal select").selectmenu("destroy").selectmenu();
+            			},
+				});
+			});
+        	</script>
+        
+        	<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        	<script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X');ga('send','pageview');
+        	</script>
+        </footer><!-- end footer -->
+        <div id="alerts" class="modal">
+  			<div class="clear modalHeader">
+            	<h2 class="left">Add Mobile Number</h2>
+            	<a href="#" class="close right" title="Close"><i class="fa fa-times"></i></a>
+            </div><!-- end clear -->
+    		<div class="content">
+            	<div class="global-error" style="display:block">
+                	<p>Code not correct!</p>
+                </div><!-- end global error -->
+            	<p>Recieve text alerts from the Tech:</p>
+                <form action="" method="post" class="clear showLabels">
+                	<div class="form-item">
+                    	<label for="mobile-number">Mobile Number including Area Code</label>
+                        <input name="mobile-number" id="mobile-number" type="text" value="" />
+                    </div><!-- end form item -->
+                    <div class="form-item">
+                    	<select name="carrier" id="carrier">
+                        	<option>Select your carrier</option>
+                        	<option value="vzw">Verizon</option>
+                            <option value="att">AT&amp;T</option>
+                            <option value="sprint">Sprint</option>
+                        </select>
+                    </div><!-- end form item -->
+                    <a href="#" class="button button-secondary right">Get Verification Code</a>
+                </form>
+                <p>Once you receive a verification code on your device, enter it below:</p>
+                <form action="" method="post" class="clear showLabels">
+                    <div class="form-item">
+                    	<label for="code">Verification Code</label>
+                        <input name="code" id="code" type="text" value="" />
+                    </div><!-- end form item -->
+                    <a href="#" id="add-number" value="Add Number" class="right button">Add Number</a>
+                    <a href="javascript:void(0)" onClick="jQuery('#alerts').trigger('closeModal');" class="button button-secondary right">Cancel</a>
+                </form>
+
+            </div>
+  		</div><!-- end #login -->
+  		<!-- end Modal Overlay -->
+
+    </body>
+</html>
